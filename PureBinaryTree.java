@@ -17,13 +17,21 @@ public class PureBinaryTree <E extends Object>{
 		tail = null;
 	}
 	*/
-	
+/**
+*@param PureBinaryTree Constructor
+*@param E item
+*/
 	public PureBinaryTree(E item){
 		value = item;
 		leftChild = null;
 		rightChild = null;
 	}
 	
+/**
+*@param toString Method
+*@param first String indent
+*@return String
+*/
 	public String toString(String indent) {
     
 	StringBuilder builder = new StringBuilder();
@@ -40,8 +48,10 @@ public class PureBinaryTree <E extends Object>{
 	return builder.toString();
 	}
 	
-	
-	//Doesn't work
+/**
+*@param second toString method
+*@return String
+*/
 	public String toString(){
 		return toString("");
 	}
@@ -55,6 +65,8 @@ public class PureBinaryTree <E extends Object>{
 		return this.value;
 		}
 	}
+	
+//Failed attempt @ getValue(), doesn't need to return a .toString()	
 	/*
 	public String getValue(){
 		if(value == null){
@@ -64,26 +76,49 @@ public class PureBinaryTree <E extends Object>{
 	}
 	*/
 	
+/**
+*@param setValue method
+*@param E item
+*@return void
+*/
 	public void setValue(E item){
 		value = item;
 	}
-	
+		
+/**
+*@param setLeftChild method
+*@param PureBinaryTree<E> item
+*@return void
+*/
 	public void setLeftChild(PureBinaryTree<E> item){
 		leftChild = item;
 	}
-	
+/**
+*@param setLeftChild method
+*@param PureBinaryTree<E> item
+*@return void
+*/	
 	public void setRightChild(PureBinaryTree<E> item){
 		rightChild = item;
 	}
-	
+/**
+*@param getLeftChild method
+*@return PureBinaryTree<E>
+*/	
 	public PureBinaryTree<E> getLeftChild(){
 		return leftChild;
 	}
-	
+/**
+*@param getRightChild method
+*@return PureBinaryTree<E>
+*/
 	public PureBinaryTree<E> getRightChild(){
 		return rightChild;
 	}
-	
+/**	
+*@param getHeight method
+*@return integer
+*/
 	public int getHeight(){
 		int Length = 1;
 		int Height = 1;
@@ -99,7 +134,11 @@ public class PureBinaryTree <E extends Object>{
 			return Length;
 		}
 	}
-	
+/**
+*@param equals method
+*@param PureBinaryTree<E> item
+*@return boolean
+*/
 	public boolean equals (PureBinaryTree<E> item){
 		boolean leftSubtreesEqual = false;
 		boolean rightSubtreesEqual = false;
